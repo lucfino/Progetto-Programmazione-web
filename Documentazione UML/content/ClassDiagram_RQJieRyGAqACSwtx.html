@@ -1,0 +1,315 @@
+<html>
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="report.css" type="text/css"/>
+	<title>Class Diagram - Utility</title>
+	<script type="text/javascript" src="report.js"></script>
+	<script type="text/javascript" src="link_popup.js"></script>
+	<script type="text/javascript" src="tooltip.js"></script>
+</head>
+<body style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" onload="initPage();initDiagram();initGridDiagram();">
+	<div id="vplink" style="position:absolute; z-index:3; visibility:hidden">
+		<table bordercolor="#A9BFD3" cellpadding="0" border="1" cellspacing="0">
+			<tr>
+				<td>
+					<table width="100%" cellpadding="0" border="0" cellspacing="0">
+						<tr style="background:#DDDDDD">
+							<td style="font-size: 12px;" align="left">
+Link:							</td>
+							<td style="font-size: 12px;" align="right">
+								<input id="vplink-checkbox" onClick="javascript: vpLinkToggleName()" type="checkbox" />
+								<label for="vplink-checkbox">with Name</label>							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<textarea id="vplink-text" style="width: 348px; height: 60px; border-color: #7EADD9; outline: none;"></textarea>				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="spotlight" style="position:absolute; width:100px; height:100px; z-index:2; visibility:hidden">
+		<table id="spotLightTable" onClick="updateCursorPos(event);adjustPopupPositionForSpotLightTable();clearSpotLight()" style="border-style:solid; border-width:3px; border-color:#FF0000" width="100%" cellpadding="0" border="0" cellspacing="0">
+			<tr>
+				<td id="spotLightCell">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<canvas id="spotlight_c" height="100" style="position:absolute; z-index:2; visibility:hidden" width="100">
+	</canvas>
+	<div id="spotLightResourcesTop" style="position:absolute; width:100px; height:100px; z-index:1; visibility:hidden">
+		<table cellpadding="0" border="0" cellspacing="0">
+			<tr>
+				<td>
+					<a href="#top">
+						<img style="border:none" src="../images/icons/BackToTop.gif" alt="Back to top"/></a>
+				</td>
+				<td>
+					<a href="javascript:clearSpotLightFromOpenSpecButton();">
+						<img style="border:none" src="../images/icons/OpenSpecification.gif" alt="Open specification"/></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="spotLightResourcesRight" style="position:absolute; width:100px; height:100px; z-index:1; visibility:hidden">
+		<table cellpadding="0" border="0" cellspacing="0">
+			<tr>
+				<td>
+					<a href="#top">
+						<img style="border:none" src="../images/icons/BackToTop.gif" alt="Back to top"/></a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="javascript:clearSpotLightFromOpenSpecButton();">
+						<img style="border:none" src="../images/icons/OpenSpecification.gif" alt="Open specification"/></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="linkPopupMenuLayer" style="position:absolute;z-index:2;visibility:hidden">
+		<table id="linkPopupMenuTable" style="border-style:solid; border-width:1px; border-color:#000000; background:#FFFFFF; width:250px" width="100%" border="0">
+		</table>
+	</div>
+	<div id="referenceIconLayer" style="position:absolute; z-index:1; visibility:hidden; ">
+		<table style="font-size:1;" width="100%" cellpadding="3" border="0" cellspacing="0">
+			<tr>
+				<td>
+					<img src="../images/icons/Ref.gif" style="border:none" onclick="movePopupPositionToReferenceIconPosition();resetPopupForReference();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="subdiagramIconLayer" style="position:absolute; z-index:1; visibility:hidden">
+		<table width="100%" cellpadding="3" border="0" cellspacing="0">
+			<tr>
+				<td>
+					<img src="../images/icons/Subdiagram.gif" style="border:none" onclick="movePopupPositionToSubdiagramIconPosition();resetPopupForSubdiagram();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="transitorIconLayer" style="position:absolute; z-index:1; visibility:hidden">
+		<table width="100%" cellpadding="3" border="0" cellspacing="0">
+			<tr>
+				<td>
+					<img src="../images/icons/Transitor.gif" style="border:none" onclick="movePopupPositionToTransitorIconPosition();resetPopupForTransitor();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="HeaderText">
+		CalcettoOnLine Documentation	</div>
+	<table width="100%" cellpadding="0" border="0" cellspacing="0">
+		<tr>
+			<td class="HeaderLine1">
+			</td>
+		</tr>
+		<tr>
+			<td class="HeaderLine2">
+			</td>
+		</tr>
+		<tr>
+			<td class="HeaderLine3">
+			</td>
+		</tr>
+	</table>
+	<div id="vplink" style="position:absolute; z-index:1; visibility:hidden">
+		<table bordercolor="#A9BFD3" cellpadding="0" border="1" cellspacing="0">
+			<tr>
+				<td>
+					<table width="100%" cellpadding="0" border="0" cellspacing="0">
+						<tr style="background:#DDDDDD">
+							<td style="font-size: 12px;" align="left">
+Link:							</td>
+							<td style="font-size: 12px;" align="right">
+								<input id="vplink-checkbox" onClick="javascript: vpLinkToggleName()" type="checkbox" />
+								<label for="vplink-checkbox">with Name</label>							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<textarea id="vplink-text" style="width: 348px; height: 60px; border-color: #7EADD9; outline: none;"></textarea>				</td>
+			</tr>
+		</table>
+	</div>
+	<p>
+		<a target="_content_pane" class="PageParentTitle" href="Package_1WpieRyGAqACSwt5.html">
+Utility : Package</a>
+	</p>
+	<p class="PageTitle">
+		Class Diagram - Utility		<a style="padding-left: 16px; font-size: 12px" onclick="javascript: showVpLink('CalcettoOnLine.vpp://diagram/RQJieRyGAqACSwtx', 'Utility\nCalcettoOnLine.vpp://diagram/RQJieRyGAqACSwtx', this); return false;" href="#">
+			<img src="../images/icons/link.png" border="0"> link</a>
+	</p>
+	<table width="100%" cellpadding="0" border="0" cellspacing="0">
+		<tr>
+			<td>
+<span class="TableContent">Jump to:</span>				<select id="SelectShape" class="TableContent" onChange="scrollWin(this.value);showSpotLight(this.value)">
+<option value="">Please select a model element</option>
+<option value="shape|2.0|2.0|320.0|300.0|Class_uUFieRyGAqACSwuH.html|Class_uUFieRyGAqACSwuH.html|uUFieRyGAqACSwuG" id="optionuUFieRyGAqACSwuG">UControlli : Class</option>
+<option value="shape|362.0|22.0|420.0|90.0|Class_j_VyeRyGAqACSwv2.html|Class_j_VyeRyGAqACSwv2.html|j.VyeRyGAqACSwv1" id="optionj.VyeRyGAqACSwv1">UCookie : Class</option>
+<option value="shape|22.0|432.0|810.0|80.0|Class_RQSKeRyGAqACSwwc.html|Class_RQSKeRyGAqACSwwc.html|RQSKeRyGAqACSwwb" id="optionRQSKeRyGAqACSwwb">UEmail : Class</option>
+<option value="shape|572.0|192.0|260.0|150.0|Class_GqXKeRyGAqACSww7.html|Class_GqXKeRyGAqACSww7.html|GqXKeRyGAqACSww6" id="optionGqXKeRyGAqACSww6">USession : Class</option>
+<option value="shape|42.0|322.0|160.0|80.0|Class_BxNqeRyGAqACSwxp.html|Class_BxNqeRyGAqACSwxp.html|BxNqeRyGAqACSwxo" id="optionBxNqeRyGAqACSwxo">USingleton : Class</option>
+<option value="shape|352.0|192.0|180.0|150.0|Class_YdMaeRyGAqACSwyD.html|Class_YdMaeRyGAqACSwyD.html|YdMaeRyGAqACSwyC" id="optionYdMaeRyGAqACSwyC">UTime : Class</option>
+</select>			</td>
+		</tr>
+	</table>
+	<table width="100%" cellpadding="0" border="0" cellspacing="0">
+		<tr>
+			<td>
+				<img id="diagram" src="../images/Utility.png" usemap="#diagram_map" class="Image" width="836" height="516"/>
+				<map name="diagram_map">
+<area coords="352.0, 192.0, 532.0, 342.0" coords2="352.0, 192.0, 532.0, 342.0" shape="rect" alt="UTime:Class" id="areadiagram_map_YdMaeRyGAqACSwyC" href="Class_YdMaeRyGAqACSwyD.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="42.0, 322.0, 202.0, 402.0" coords2="42.0, 322.0, 202.0, 402.0" shape="rect" alt="USingleton:Class" id="areadiagram_map_BxNqeRyGAqACSwxo" href="Class_BxNqeRyGAqACSwxp.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="572.0, 192.0, 832.0, 342.0" coords2="572.0, 192.0, 832.0, 342.0" shape="rect" alt="USession:Class" id="areadiagram_map_GqXKeRyGAqACSww6" href="Class_GqXKeRyGAqACSww7.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="22.0, 432.0, 832.0, 512.0" coords2="22.0, 432.0, 832.0, 512.0" shape="rect" alt="UEmail:Class" id="areadiagram_map_RQSKeRyGAqACSwwb" href="Class_RQSKeRyGAqACSwwc.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="362.0, 22.0, 782.0, 112.0" coords2="362.0, 22.0, 782.0, 112.0" shape="rect" alt="UCookie:Class" id="areadiagram_map_j.VyeRyGAqACSwv1" href="Class_j_VyeRyGAqACSwv2.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="2.0, 2.0, 322.0, 302.0" coords2="2.0, 2.0, 322.0, 302.0" shape="rect" alt="UControlli:Class" id="areadiagram_map_uUFieRyGAqACSwuG" href="Class_uUFieRyGAqACSwuH.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+</map>
+			</td>
+		</tr>
+	</table>
+	<p>
+	</p>
+	<table width="100%" cellpadding="0" border="0" cellspacing="0">
+		<tr>
+			<td class="Category">
+				Model Elements			</td>
+		</tr>
+		<tr>
+			<td style="height: 5px">
+			</td>
+		</tr>
+	</table>
+	<table width="100%" cellpadding="0" border="0" cellspacing="0">
+		<tr>
+			<td colSpan="4" class="TableHeaderLine">
+			</td>
+		</tr>
+		<tr>
+			<td colSpan="4" class="TableHeaderLine1">
+			</td>
+		</tr>
+		<tr class="TableHeader">
+			<td class="TableCellSpaceHolder10Px">
+			</td>
+			<td width="30%">
+<span class="TableHeaderText">Name</span>			</td>
+			<td class="TableCellSpaceHolder20Px">
+			</td>
+			<td>
+<span class="TableHeaderText">Documentation</span>			</td>
+		</tr>
+		<tr>
+			<td colSpan="4" class="TableHeaderLine2">
+			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png');">
+					</div>
+					&nbsp; <a target="_content_pane" class="ItemLink" href="Class_uUFieRyGAqACSwuH.html">UControlli : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png');">
+					</div>
+					&nbsp; <a target="_content_pane" class="ItemLink" href="Class_j_VyeRyGAqACSwv2.html">UCookie : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png');">
+					</div>
+					&nbsp; <a target="_content_pane" class="ItemLink" href="Class_RQSKeRyGAqACSwwc.html">UEmail : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png');">
+					</div>
+					&nbsp; <a target="_content_pane" class="ItemLink" href="Class_GqXKeRyGAqACSww7.html">USession : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png');">
+					</div>
+					&nbsp; <a target="_content_pane" class="ItemLink" href="Class_BxNqeRyGAqACSwxp.html">USingleton : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png');">
+					</div>
+					&nbsp; <a target="_content_pane" class="ItemLink" href="Class_YdMaeRyGAqACSwyD.html">UTime : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+	</table>
+	<table width="100%" cellpadding="0" border="0" cellspacing="0">
+		<tr>
+			<td class="TableCellSpaceHolder1PxTall">
+			</td>
+		</tr>
+		<tr>
+			<td class="TableFooter">
+			</td>
+		</tr>
+	</table>
+	<div style="height: 20px">
+	</div>
+	<table width="100%" cellpadding="0" border="0" cellspacing="0">
+		<tr>
+			<td class="FooterLine">
+			</td>
+		</tr>
+	</table>
+	<div class="HeaderText">
+		CalcettoOnLine Documentation	</div>
+</body>
+</html>

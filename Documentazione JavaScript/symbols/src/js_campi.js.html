@@ -1,0 +1,31 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="NAME">campi</span><span class="PUNC">=</span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Object</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>  2</span> 
+<span class='line'>  3</span> </span><span class="NAME">campi.ajax</span><span class="PUNC">=</span><span class="NAME">compatibilita</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>  4</span> 
+<span class='line'>  5</span> </span><span class="COMM">/**
+<span class='line'>  6</span>  * Fa una richiesta POST http tramite ajax al server
+<span class='line'>  7</span>  *  e mostra il risultato nel div rappresentato dall'id contente
+<span class='line'>  8</span>  */</span><span class="WHIT">
+<span class='line'>  9</span> </span><span class="NAME">campi.mostra</span><span class="PUNC">=</span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 10</span> </span><span class="WHIT">    </span><span class="WHIT">
+<span class='line'> 11</span> </span><span class="WHIT">    </span><span class="NAME">this.ajax.onreadystatechange</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 12</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="PUNC">(</span><span class="NAME">this.readyState</span><span class="WHIT"> </span><span class="PUNC">==</span><span class="WHIT"> </span><span class="NUMB">4</span><span class="WHIT"> </span><span class="PUNC">&&</span><span class="WHIT"> </span><span class="NAME">this.status</span><span class="WHIT"> </span><span class="PUNC">==</span><span class="WHIT"> </span><span class="NUMB">200</span><span class="WHIT"> </span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 13</span> </span><span class="WHIT">        	 </span><span class="WHIT">
+<span class='line'> 14</span> </span><span class="WHIT">        	</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">cont</span><span class="PUNC">=</span><span class="NAME">document.getElementById</span><span class="PUNC">(</span><span class="STRN">'content'</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 15</span> </span><span class="WHIT">        	</span><span class="NAME">cont.innerHTML</span><span class="PUNC">=</span><span class="NAME">campi.ajax.responseText</span><span class="PUNC">;</span><span class="WHIT">              </span><span class="WHIT">
+<span class='line'> 16</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 17</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 18</span> </span><span class="WHIT">    </span><span class="NAME">this.ajax.open</span><span class="PUNC">(</span><span class="STRN">"GET"</span><span class="PUNC">,</span><span class="STRN">"?controller=ajax&task=campi&aj=1"</span><span class="PUNC">,</span><span class="KEYW">true</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 19</span> </span><span class="WHIT">    </span><span class="NAME">this.ajax.send</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 20</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 21</span> 
+<span class='line'> 22</span> 
+<span class='line'> 23</span> 
+<span class='line'> 24</span> </span></pre></body></html>

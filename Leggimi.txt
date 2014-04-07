@@ -1,0 +1,45 @@
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+INFORMAZIONI SUL PROGETTO CALCETTO_ONLINE
+
+    PARTECIPANTI AL PROGETTO:
+                    Daniele Leombruni
+                    Luca Finocchio
+		    Giuseppe Fiorilli
+///////////////////////////////////////////////////////////////////////////////
+
+Documentazione fornita:
+    1. Diagramma delle classi UML
+    2. Diagramma dei casi d'uso
+    3. Diagramma ER per la progettazione della base di dati
+    4. Documentazione del codice PHP
+    5. Documentazione del codice JavaScript
+
+La funzione JavaScript getquerystring(...), all'interno
+del file "js/utility.js", è stata state prelevate da Internet.
+
+La grafica è stata curata da Daniele Leombruni e Giuseppe Fiorilli.
+
+La fase di installazione e la parte riguardante ajax sono state realizzate da Luca Finocchio.
+In caso di problemi con l'installazione, pulire la cache.
+
+Gli script SQL e la progettazione delle classi, sono state realizzate dal team al completo.
+
+Per il lato back-end, è stata implementata la fase di modifica delle informazioni
+relative ai "campi" e agli "utenti"; mentre per il resto del db vengono mostrate solo le 
+enuple di ogni tabella in quanto il modo di procedere sarebbe stato molto simile a quello utilizzato per campi e utenti.
+    
+N.B.: "utente" e "campo" sono le entità che contengono il maggior numero di informazioni.
+
+Il sito non è online poichè su zymic non è permessa la modifica dei file sul server mentre su altervista non possedevamo i privilegi per creare database.
+
+Il sito è stato testato per la maggior parte su Mozilla Firefox.
+Su google chrome non è possibile utilizzare l'invio dei dati di registrazione tramite AJAX poichè viene riscontrato il seguente errore: "Uncaught TypeError: Cannot call method 'toUpperCase' of undefined".
+La stessa cosa accade per internet explorer.
+
+Gli utenti di esempio hanno le seguenti password:
+
+nome: merlo, password: merlo89; non attivato
+nome: danny, password: danny89; attivato (consigliato per l'accesso)
+nome: james, password: james89; bannato
+nome: lucas, password: lucas89; attivato
+ 

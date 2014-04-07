@@ -1,0 +1,339 @@
+<html>
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="report.css" type="text/css"/>
+	<title>Class Diagram - Entity</title>
+	<script type="text/javascript" src="report.js"></script>
+	<script type="text/javascript" src="link_popup.js"></script>
+	<script type="text/javascript" src="tooltip.js"></script>
+</head>
+<body style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" onload="initPage();initDiagram();initGridDiagram();">
+	<div id="vplink" style="position:absolute; z-index:3; visibility:hidden">
+		<table bordercolor="#A9BFD3" cellpadding="0" border="1" cellspacing="0">
+			<tr>
+				<td>
+					<table width="100%" cellpadding="0" border="0" cellspacing="0">
+						<tr style="background:#DDDDDD">
+							<td style="font-size: 12px;" align="left">
+Link:							</td>
+							<td style="font-size: 12px;" align="right">
+								<input id="vplink-checkbox" onClick="javascript: vpLinkToggleName()" type="checkbox" />
+								<label for="vplink-checkbox">with Name</label>							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<textarea id="vplink-text" style="width: 348px; height: 60px; border-color: #7EADD9; outline: none;"></textarea>				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="spotlight" style="position:absolute; width:100px; height:100px; z-index:2; visibility:hidden">
+		<table id="spotLightTable" onClick="updateCursorPos(event);adjustPopupPositionForSpotLightTable();clearSpotLight()" style="border-style:solid; border-width:3px; border-color:#FF0000" width="100%" cellpadding="0" border="0" cellspacing="0">
+			<tr>
+				<td id="spotLightCell">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<canvas id="spotlight_c" height="100" style="position:absolute; z-index:2; visibility:hidden" width="100">
+	</canvas>
+	<div id="spotLightResourcesTop" style="position:absolute; width:100px; height:100px; z-index:1; visibility:hidden">
+		<table cellpadding="0" border="0" cellspacing="0">
+			<tr>
+				<td>
+					<a href="#top">
+						<img style="border:none" src="../images/icons/BackToTop.gif" alt="Back to top"/></a>
+				</td>
+				<td>
+					<a href="javascript:clearSpotLightFromOpenSpecButton();">
+						<img style="border:none" src="../images/icons/OpenSpecification.gif" alt="Open specification"/></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="spotLightResourcesRight" style="position:absolute; width:100px; height:100px; z-index:1; visibility:hidden">
+		<table cellpadding="0" border="0" cellspacing="0">
+			<tr>
+				<td>
+					<a href="#top">
+						<img style="border:none" src="../images/icons/BackToTop.gif" alt="Back to top"/></a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="javascript:clearSpotLightFromOpenSpecButton();">
+						<img style="border:none" src="../images/icons/OpenSpecification.gif" alt="Open specification"/></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="linkPopupMenuLayer" style="position:absolute;z-index:2;visibility:hidden">
+		<table id="linkPopupMenuTable" style="border-style:solid; border-width:1px; border-color:#000000; background:#FFFFFF; width:250px" width="100%" border="0">
+		</table>
+	</div>
+	<div id="referenceIconLayer" style="position:absolute; z-index:1; visibility:hidden; ">
+		<table style="font-size:1;" width="100%" cellpadding="3" border="0" cellspacing="0">
+			<tr>
+				<td>
+					<img src="../images/icons/Ref.gif" style="border:none" onclick="movePopupPositionToReferenceIconPosition();resetPopupForReference();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="subdiagramIconLayer" style="position:absolute; z-index:1; visibility:hidden">
+		<table width="100%" cellpadding="3" border="0" cellspacing="0">
+			<tr>
+				<td>
+					<img src="../images/icons/Subdiagram.gif" style="border:none" onclick="movePopupPositionToSubdiagramIconPosition();resetPopupForSubdiagram();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="transitorIconLayer" style="position:absolute; z-index:1; visibility:hidden">
+		<table width="100%" cellpadding="3" border="0" cellspacing="0">
+			<tr>
+				<td>
+					<img src="../images/icons/Transitor.gif" style="border:none" onclick="movePopupPositionToTransitorIconPosition();resetPopupForTransitor();switchPopupShowHideStatus();" />				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="HeaderText">
+		CalcettoOnLine Documentation	</div>
+	<table width="100%" cellpadding="0" border="0" cellspacing="0">
+		<tr>
+			<td class="HeaderLine1">
+			</td>
+		</tr>
+		<tr>
+			<td class="HeaderLine2">
+			</td>
+		</tr>
+		<tr>
+			<td class="HeaderLine3">
+			</td>
+		</tr>
+	</table>
+	<div id="vplink" style="position:absolute; z-index:1; visibility:hidden">
+		<table bordercolor="#A9BFD3" cellpadding="0" border="1" cellspacing="0">
+			<tr>
+				<td>
+					<table width="100%" cellpadding="0" border="0" cellspacing="0">
+						<tr style="background:#DDDDDD">
+							<td style="font-size: 12px;" align="left">
+Link:							</td>
+							<td style="font-size: 12px;" align="right">
+								<input id="vplink-checkbox" onClick="javascript: vpLinkToggleName()" type="checkbox" />
+								<label for="vplink-checkbox">with Name</label>							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<textarea id="vplink-text" style="width: 348px; height: 60px; border-color: #7EADD9; outline: none;"></textarea>				</td>
+			</tr>
+		</table>
+	</div>
+	<p>
+		<a target="_content_pane" class="PageParentTitle" href="Package__vI_uRyGAqACSwg3.html">
+Entity : Package</a>
+	</p>
+	<p class="PageTitle">
+		Class Diagram - Entity		<a style="padding-left: 16px; font-size: 12px" onclick="javascript: showVpLink('CalcettoOnLine.vpp://diagram/vTrauRyGAqACSwLc', 'Entity\nCalcettoOnLine.vpp://diagram/vTrauRyGAqACSwLc', this); return false;" href="#">
+			<img src="../images/icons/link.png" border="0"> link</a>
+	</p>
+	<table width="100%" cellpadding="0" border="0" cellspacing="0">
+		<tr>
+			<td>
+<span class="TableContent">Jump to:</span>				<select id="SelectShape" class="TableContent" onChange="scrollWin(this.value);showSpotLight(this.value)">
+<option value="">Please select a model element</option>
+<option value="shape|2.0|22.0|220.0|320.0|Class_pz_auRyGAqACSwLm.html|Class_pz_auRyGAqACSwLm.html|Fj_auRyGAqACSwLl" id="optionFj_auRyGAqACSwLl">EUtente : Class</option>
+<option value="shape|642.0|12.0|120.0|120.0|Class_4jPuuRyGAqACSwNC.html|Class_4jPuuRyGAqACSwNC.html|4jPuuRyGAqACSwNB" id="option4jPuuRyGAqACSwNB">ECampo : Class</option>
+<option value="shape|312.0|2.0|250.0|170.0|Class_Qu3_uRyGAqACSwNf.html|Class_Qu3_uRyGAqACSwNf.html|Qu3.uRyGAqACSwNe" id="optionQu3.uRyGAqACSwNe">ESquadra : Class</option>
+<option value="shape|652.0|212.0|150.0|240.0|Class_KjlZuRyGAqACSwOk.html|Class_KjlZuRyGAqACSwOk.html|KjlZuRyGAqACSwOj" id="optionKjlZuRyGAqACSwOj">EPartita : Class</option>
+<option value="shape|362.0|262.0|120.0|70.0|Class_YteVuRyGAqACSwPY.html|Class_YteVuRyGAqACSwPY.html|YteVuRyGAqACSwPX" id="optionYteVuRyGAqACSwPX">EPartecipanti : Class</option>
+<option value="shape|32.0|402.0|140.0|80.0|Class_ywC1uRyGAqACSwPo.html|Class_ywC1uRyGAqACSwPo.html|ywC1uRyGAqACSwPn" id="optionywC1uRyGAqACSwPn">ERecupero : Class</option>
+<option value="shape|262.0|392.0|340.0|170.0|Class_qpD1uRyGAqACSwP4.html|Class_qpD1uRyGAqACSwP4.html|qpD1uRyGAqACSwP3" id="optionqpD1uRyGAqACSwP3">EVoto : Class</option>
+</select>			</td>
+		</tr>
+	</table>
+	<table width="100%" cellpadding="0" border="0" cellspacing="0">
+		<tr>
+			<td>
+				<img id="diagram" src="../images/Entity.png" usemap="#diagram_map" class="Image" width="806" height="566"/>
+				<map name="diagram_map">
+<area coords="262.0, 392.0, 602.0, 562.0" coords2="262.0, 392.0, 602.0, 562.0" shape="rect" alt="EVoto:Class" id="areadiagram_map_qpD1uRyGAqACSwP3" href="Class_qpD1uRyGAqACSwP4.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="32.0, 402.0, 172.0, 482.0" coords2="32.0, 402.0, 172.0, 482.0" shape="rect" alt="ERecupero:Class" id="areadiagram_map_ywC1uRyGAqACSwPn" href="Class_ywC1uRyGAqACSwPo.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="362.0, 262.0, 482.0, 332.0" coords2="362.0, 262.0, 482.0, 332.0" shape="rect" alt="EPartecipanti:Class" id="areadiagram_map_YteVuRyGAqACSwPX" href="Class_YteVuRyGAqACSwPY.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="652.0, 212.0, 802.0, 452.0" coords2="652.0, 212.0, 802.0, 452.0" shape="rect" alt="EPartita:Class" id="areadiagram_map_KjlZuRyGAqACSwOj" href="Class_KjlZuRyGAqACSwOk.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="312.0, 2.0, 562.0, 172.0" coords2="312.0, 2.0, 562.0, 172.0" shape="rect" alt="ESquadra:Class" id="areadiagram_map_Qu3.uRyGAqACSwNe" href="Class_Qu3_uRyGAqACSwNf.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="642.0, 12.0, 762.0, 132.0" coords2="642.0, 12.0, 762.0, 132.0" shape="rect" alt="ECampo:Class" id="areadiagram_map_4jPuuRyGAqACSwNB" href="Class_4jPuuRyGAqACSwNC.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="2.0, 22.0, 222.0, 342.0" coords2="2.0, 22.0, 222.0, 342.0" shape="rect" alt="EUtente:Class" id="areadiagram_map_Fj_auRyGAqACSwLl" href="Class_pz_auRyGAqACSwLm.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="415.0, 162.0, 415.0, 271.0, 429.0, 271.0, 429.0, 162.0" coords2="415.0, 162.0, 415.0, 271.0, 429.0, 271.0, 429.0, 162.0" shape="poly" alt="null:Association" id="areadiagram_map_6OgTuRyGAqACSwSN" href="Association_4OgTuRyGAqACSwSI.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="555.0, 160.0, 550.0, 173.0, 658.0, 223.0, 663.0, 210.0, 555.0, 160.0" coords2="555.0, 160.0, 550.0, 173.0, 658.0, 223.0, 663.0, 210.0, 555.0, 160.0" shape="poly" alt="null:Association" id="areadiagram_map_u1QTuRyGAqACSwSY" href="Association_s1QTuRyGAqACSwST.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="715.0, 122.0, 715.0, 221.0, 729.0, 221.0, 729.0, 122.0" coords2="715.0, 122.0, 715.0, 221.0, 729.0, 221.0, 729.0, 122.0" shape="poly" alt="null:Association" id="areadiagram_map_VbwTuRyGAqACSwSj" href="Association_VbwTuRyGAqACSwSe.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="221.0, 329.0, 210.0, 338.0, 262.0, 404.0, 273.0, 395.0, 221.0, 329.0" coords2="221.0, 329.0, 210.0, 338.0, 262.0, 404.0, 273.0, 395.0, 221.0, 329.0" shape="poly" alt="null:Association" id="areadiagram_map_Jy8TuRyGAqACSwS8" href="Association_Jy8TuRyGAqACSwS3.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="592.0, 385.0, 592.0, 399.0, 661.0, 399.0, 661.0, 385.0" coords2="592.0, 385.0, 592.0, 399.0, 661.0, 399.0, 661.0, 385.0" shape="poly" alt="null:Association" id="areadiagram_map_yMKTuRyGAqACSwTX" href="Association_yMKTuRyGAqACSwTS.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="212.0, 285.0, 212.0, 299.0, 371.0, 299.0, 371.0, 285.0" coords2="212.0, 285.0, 212.0, 299.0, 371.0, 299.0, 371.0, 285.0" shape="poly" alt="null:Association" id="areadiagram_map_RKaTuRyGAqACSwTi" href="Association_RKaTuRyGAqACSwTd.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="472.0, 285.0, 472.0, 299.0, 661.0, 299.0, 661.0, 285.0" coords2="472.0, 285.0, 472.0, 299.0, 661.0, 299.0, 661.0, 285.0" shape="poly" alt="null:Association" id="areadiagram_map_.yGTuRyGAqACSwTt" href="Association__yGTuRyGAqACSwTo.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+<area coords="212.0, 55.0, 212.0, 69.0, 321.0, 69.0, 321.0, 55.0" coords2="212.0, 55.0, 212.0, 69.0, 321.0, 69.0, 321.0, 55.0" shape="poly" alt="null:Association" id="areadiagram_map_W7m.eRyGAqACSxEv" href="Association_W7m_eRyGAqACSxEq.html" onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon()"/>
+</map>
+			</td>
+		</tr>
+	</table>
+	<p>
+	</p>
+	<table width="100%" cellpadding="0" border="0" cellspacing="0">
+		<tr>
+			<td class="Category">
+				Model Elements			</td>
+		</tr>
+		<tr>
+			<td style="height: 5px">
+			</td>
+		</tr>
+	</table>
+	<table width="100%" cellpadding="0" border="0" cellspacing="0">
+		<tr>
+			<td colSpan="4" class="TableHeaderLine">
+			</td>
+		</tr>
+		<tr>
+			<td colSpan="4" class="TableHeaderLine1">
+			</td>
+		</tr>
+		<tr class="TableHeader">
+			<td class="TableCellSpaceHolder10Px">
+			</td>
+			<td width="30%">
+<span class="TableHeaderText">Name</span>			</td>
+			<td class="TableCellSpaceHolder20Px">
+			</td>
+			<td>
+<span class="TableHeaderText">Documentation</span>			</td>
+		</tr>
+		<tr>
+			<td colSpan="4" class="TableHeaderLine2">
+			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png');">
+					</div>
+					&nbsp; <a target="_content_pane" class="ItemLink" href="Class_pz_auRyGAqACSwLm.html">EUtente : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png');">
+					</div>
+					&nbsp; <a target="_content_pane" class="ItemLink" href="Class_4jPuuRyGAqACSwNC.html">ECampo : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png');">
+					</div>
+					&nbsp; <a target="_content_pane" class="ItemLink" href="Class_Qu3_uRyGAqACSwNf.html">ESquadra : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png');">
+					</div>
+					&nbsp; <a target="_content_pane" class="ItemLink" href="Class_KjlZuRyGAqACSwOk.html">EPartita : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png');">
+					</div>
+					&nbsp; <a target="_content_pane" class="ItemLink" href="Class_YteVuRyGAqACSwPY.html">EPartecipanti : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow2">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png');">
+					</div>
+					&nbsp; <a target="_content_pane" class="ItemLink" href="Class_ywC1uRyGAqACSwPo.html">ERecupero : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+		<tr class="TableRow1">
+			<td>
+			</td>
+			<td>
+				<span class="TableContent">
+					<div style="float: left; width: 18px !important;height: 18px !important;background-image:url(../images/icons/Class.png) !important; background-image:url(''); filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/icons/Class.png');">
+					</div>
+					&nbsp; <a target="_content_pane" class="ItemLink" href="Class_qpD1uRyGAqACSwP4.html">EVoto : Class</a>				</span>
+			</td>
+			<td>
+			</td>
+			<td style="padding: 5px 0">
+<span class="TableContent Documentation"></span>			</td>
+		</tr>
+	</table>
+	<table width="100%" cellpadding="0" border="0" cellspacing="0">
+		<tr>
+			<td class="TableCellSpaceHolder1PxTall">
+			</td>
+		</tr>
+		<tr>
+			<td class="TableFooter">
+			</td>
+		</tr>
+	</table>
+	<div style="height: 20px">
+	</div>
+	<table width="100%" cellpadding="0" border="0" cellspacing="0">
+		<tr>
+			<td class="FooterLine">
+			</td>
+		</tr>
+	</table>
+	<div class="HeaderText">
+		CalcettoOnLine Documentation	</div>
+</body>
+</html>

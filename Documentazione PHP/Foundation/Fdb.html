@@ -1,0 +1,836 @@
+<html>
+<head>
+<title>Docs For Class Fdb</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">Foundation</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                                                            
+                                                                      		  [ <a href="../classtrees_Foundation.html" class="menu">class tree: Foundation</a> ]
+		  [ <a href="../elementindex_Foundation.html" class="menu">index: Foundation</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+      <b>Packages:</b><br />
+              <a href="../li_Controller.html">Controller</a><br />
+              <a href="../li_Entity.html">Entity</a><br />
+              <a href="../li_Foundation.html">Foundation</a><br />
+              <a href="../li_Includes.html">Includes</a><br />
+              <a href="../li_View.html">View</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../Foundation/_Foundation---FCampo.php.html">		FCampo.php
+		</a><br>
+			<a href="../Foundation/_Foundation---Fdb.php.html">		Fdb.php
+		</a><br>
+			<a href="../Foundation/_Foundation---FPartecipanti.php.html">		FPartecipanti.php
+		</a><br>
+			<a href="../Foundation/_Foundation---FPartita.php.html">		FPartita.php
+		</a><br>
+			<a href="../Foundation/_Foundation---FRecupero.php.html">		FRecupero.php
+		</a><br>
+			<a href="../Foundation/_Foundation---FSquadra.php.html">		FSquadra.php
+		</a><br>
+			<a href="../Foundation/_Foundation---FUtente.php.html">		FUtente.php
+		</a><br>
+			<a href="../Foundation/_Foundation---FVoto.php.html">		FVoto.php
+		</a><br>
+	  </div><br />
+	subpackage <b>Utility</b><br>  <div class="package">
+			<a href="../Foundation/Utility/_Foundation---Utility---UControlli.php.html">		UControlli.php
+		</a><br>
+			<a href="../Foundation/Utility/_Foundation---Utility---UCookie.php.html">		UCookie.php
+		</a><br>
+			<a href="../Foundation/Utility/_Foundation---Utility---UEmail.php.html">		UEmail.php
+		</a><br>
+			<a href="../Foundation/Utility/_Foundation---Utility---USession.php.html">		USession.php
+		</a><br>
+			<a href="../Foundation/Utility/_Foundation---Utility---USingleton.php.html">		USingleton.php
+		</a><br>
+			<a href="../Foundation/Utility/_Foundation---Utility---UTime.php.html">		UTime.php
+		</a><br>
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../Foundation/FCampo.html">FCampo</a><br />
+	    		<a href="../Foundation/Fdb.html">Fdb</a><br />
+	    		<a href="../Foundation/FPartecipanti.html">FPartecipanti</a><br />
+	    		<a href="../Foundation/FPartita.html">FPartita</a><br />
+	    		<a href="../Foundation/FRecupero.html">FRecupero</a><br />
+	    		<a href="../Foundation/FSquadra.html">FSquadra</a><br />
+	    		<a href="../Foundation/FUtente.html">FUtente</a><br />
+	    		<a href="../Foundation/FVoto.html">FVoto</a><br />
+	  </div>
+  <div class="package">
+	Utility<br />	    &nbsp;&nbsp;		<a href="../Foundation/Utility/UControlli.html">UControlli</a><br />
+	    &nbsp;&nbsp;		<a href="../Foundation/Utility/UCookie.html">UCookie</a><br />
+	    &nbsp;&nbsp;		<a href="../Foundation/Utility/UEmail.html">UEmail</a><br />
+	    &nbsp;&nbsp;		<a href="../Foundation/Utility/USession.html">USession</a><br />
+	    &nbsp;&nbsp;		<a href="../Foundation/Utility/USingleton.html">USingleton</a><br />
+	    &nbsp;&nbsp;		<a href="../Foundation/Utility/UTime.html">UTime</a><br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: Fdb</h1>
+Source Location: /Foundation/Fdb.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre><br />
+<div class="description"></div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+        </ul>
+
+
+
+
+    
+
+        
+</td>
+
+<td valign="top">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../Foundation/Fdb.html#var$_auto_increment">$_auto_increment</a></li>
+    <li><a href="../Foundation/Fdb.html#var$_key">$_key</a></li>
+    <li><a href="../Foundation/Fdb.html#var$_return_class">$_return_class</a></li>
+    <li><a href="../Foundation/Fdb.html#var$_table">$_table</a></li>
+  </ul>
+</td>
+
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../Foundation/Fdb.html#method__construct">__construct</a></li>
+    <li><a href="../Foundation/Fdb.html#methodclose">close</a></li>
+    <li><a href="../Foundation/Fdb.html#methodconnect">connect</a></li>
+    <li><a href="../Foundation/Fdb.html#methoddelete">delete</a></li>
+    <li><a href="../Foundation/Fdb.html#methodgetObject">getObject</a></li>
+    <li><a href="../Foundation/Fdb.html#methodgetObjectArray">getObjectArray</a></li>
+    <li><a href="../Foundation/Fdb.html#methodgetResult">getResult</a></li>
+    <li><a href="../Foundation/Fdb.html#methodgetResultAssoc">getResultAssoc</a></li>
+    <li><a href="../Foundation/Fdb.html#methodload">load</a></li>
+    <li><a href="../Foundation/Fdb.html#methodquery">query</a></li>
+    <li><a href="../Foundation/Fdb.html#methodsearch">search</a></li>
+    <li><a href="../Foundation/Fdb.html#methodstore">store</a></li>
+    <li><a href="../Foundation/Fdb.html#methodupdate">update</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+<td valign="top">
+<h3>Child classes:</h3>
+<div class="tags">
+<dl>
+<dt><a href="../Foundation/FCampo.html">FCampo</a></dt>
+	<dd></dd>
+</dl>
+<dl>
+<dt><a href="../Foundation/FPartecipanti.html">FPartecipanti</a></dt>
+	<dd></dd>
+</dl>
+<dl>
+<dt><a href="../Foundation/FPartita.html">FPartita</a></dt>
+	<dd></dd>
+</dl>
+<dl>
+<dt><a href="../Foundation/FRecupero.html">FRecupero</a></dt>
+	<dd></dd>
+</dl>
+<dl>
+<dt><a href="../Foundation/FSquadra.html">FSquadra</a></dt>
+	<dd></dd>
+</dl>
+<dl>
+<dt><a href="../Foundation/FUtente.html">FUtente</a></dt>
+	<dd></dd>
+</dl>
+<dl>
+<dt><a href="../Foundation/FVoto.html">FVoto</a></dt>
+	<dd></dd>
+</dl>
+</div>
+</td>
+
+
+
+
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line 8]<br />
+<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+</div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+<hr />
+<a name="class_vars"></a>
+<h3>Class Variables</h3>
+<div class="tags">
+	<a name="var$_auto_increment"></a>
+	<p></p>
+	<h4>$_auto_increment = <span class="value">false</span></h4>
+	<p>[line 32]</p>
+  <br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>var:</b>&nbsp;&nbsp;</td><td>Variabile booleana tabella con chiave automatica o no</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>$_auto_increment</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$_key"></a>
+	<p></p>
+	<h4>$_key = <span class="value"></span></h4>
+	<p>[line 24]</p>
+  <br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>var:</b>&nbsp;&nbsp;</td><td>Variabile contenente la chiave della tabella</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>$_key</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$_return_class"></a>
+	<p></p>
+	<h4>$_return_class = <span class="value"></span></h4>
+	<p>[line 28]</p>
+  <br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>var:</b>&nbsp;&nbsp;</td><td>Variabile contenente il tipo di classe da restituire</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>$_return_class</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$_table"></a>
+	<p></p>
+	<h4>$_table = <span class="value"></span></h4>
+	<p>[line 20]</p>
+  <br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>var:</b>&nbsp;&nbsp;</td><td>Variabile contenente il nome della tabella</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>$_table</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line 42]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>Fdb __construct(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Foundation/FCampo.html#method__construct">FCampo::__construct()</a></dt>
+		<dd>Costruisce la classe</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Foundation/FPartecipanti.html#method__construct">FPartecipanti::__construct()</a></dt>
+		<dd>Costruisce la classe</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Foundation/FPartita.html#method__construct">FPartita::__construct()</a></dt>
+		<dd>Costrisce la classe</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Foundation/FRecupero.html#method__construct">FRecupero::__construct()</a></dt>
+		<dd>Costruisce la classe</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Foundation/FSquadra.html#method__construct">FSquadra::__construct()</a></dt>
+		<dd>Costruisce la classe</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Foundation/FUtente.html#method__construct">FUtente::__construct()</a></dt>
+		<dd>Costruisce la classe</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Foundation/FVoto.html#method__construct">FVoto::__construct()</a></dt>
+		<dd>Costruisce la classe</dd>
+	</dl>
+	</p>
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodclose"></a>
+	<h3>method close <span class="smalllinenumber">[line 156]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void close(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Effettua la connessione al database<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodconnect"></a>
+	<h3>method connect <span class="smalllinenumber">[line 54]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean connect(
+string
+$host, string
+$user, string
+$password, string
+$database)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$host</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$user</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$password</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$database</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddelete"></a>
+	<h3>method delete <span class="smalllinenumber">[line 215]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean delete(
+object
+$object)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Cancella dal database lo stato di un oggetto<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">object&nbsp;&nbsp;</td>
+        <td><b>$object</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetObject"></a>
+	<h3>method getObject <span class="smalllinenumber">[line 125]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>mixed getObject(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Restituisce un oggetto della classe Entity impostata in _return_class contentente i risultati della query<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetObjectArray"></a>
+	<h3>method getObjectArray <span class="smalllinenumber">[line 140]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getObjectArray(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Restiuisce un array di oggetti contenenti il risultato della query<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetResult"></a>
+	<h3>method getResult <span class="smalllinenumber">[line 108]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getResult(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Restituisce il risultato della query in un array<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetResultAssoc"></a>
+	<h3>method getResultAssoc <span class="smalllinenumber">[line 87]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getResultAssoc(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Restituisce il risultato in un array associativo<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodload"></a>
+	<h3>method load <span class="smalllinenumber">[line 201]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean load(
+mixed
+$key)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Carica in un oggetto lo stato dal database<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Foundation/FPartita.html#methodload">FPartita::load()</a></dt>
+		<dd>Dato l'id trova la partita corrispondete sul db</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Foundation/FVoto.html#methodload">FVoto::load()</a></dt>
+		<dd>Dato l'id trova il voto corrispondente sul db</dd>
+	</dl>
+	</p>
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$key</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodquery"></a>
+	<h3>method query <span class="smalllinenumber">[line 73]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean query(
+string
+$query)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Effettua una query al database<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$query</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsearch"></a>
+	<h3>method search <span class="smalllinenumber">[line 256]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array search(
+[array
+$parametri = array()], [string
+$ordinamento = ''], [string
+$limit = ''])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Effettua una ricerca sul database<br /><br /><br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Foundation/FPartita.html#methodsearch">FPartita::search()</a></dt>
+		<dd>Cerca una partita su db</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Foundation/FVoto.html#methodsearch">FVoto::search()</a></dt>
+		<dd>Cerca un voto sul db</dd>
+	</dl>
+	</p>
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$parametri</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$ordinamento</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$limit</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodstore"></a>
+	<h3>method store <span class="smalllinenumber">[line 167]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean store(
+object
+$object)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Memorizza sul database lo stato di un oggetto<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Foundation/FCampo.html#methodstore">FCampo::store()</a></dt>
+		<dd>Salva un oggetto campo sul db</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Foundation/FPartecipanti.html#methodstore">FPartecipanti::store()</a></dt>
+		<dd>Salva nel db tutti i partecipanti di una partita</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Foundation/FPartita.html#methodstore">FPartita::store()</a></dt>
+		<dd>Salva una partiat sul db</dd>
+	</dl>
+		<dl>
+	<dt><a href="../Foundation/FVoto.html#methodstore">FVoto::store()</a></dt>
+		<dd>Salva un voto su db</dd>
+	</dl>
+	</p>
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">object&nbsp;&nbsp;</td>
+        <td><b>$object</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodupdate"></a>
+	<h3>method update <span class="smalllinenumber">[line 230]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean update(
+object
+$object)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Aggiorna sul database lo stato di un oggetto<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../Foundation/FPartita.html#methodupdate">FPartita::update()</a></dt>
+		<dd>Aggiorna la stato di una partita</dd>
+	</dl>
+	</p>
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">object&nbsp;&nbsp;</td>
+        <td><b>$object</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Fri, 22 Jul 2011 12:03:41 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
